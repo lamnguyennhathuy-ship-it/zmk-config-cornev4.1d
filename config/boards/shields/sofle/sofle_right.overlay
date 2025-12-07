@@ -55,6 +55,7 @@
         press-and-hold;
         press-and-hold-time = <250>;
         two-finger-tap;
+        three-finger-tap;
 
         scroll;
         natural-scroll-y;
