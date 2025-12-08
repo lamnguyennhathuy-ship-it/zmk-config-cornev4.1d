@@ -20,9 +20,9 @@ if ZMK_DISPLAY
 
 config I2C
     default y
-
-config SSD1306
-    default y
+#Remove SSD1306 setting as we are using nice!view
+#config SSD1306
+#    default y
 
 endif # ZMK_DISPLAY
 
