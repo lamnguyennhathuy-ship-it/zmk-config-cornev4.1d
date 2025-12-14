@@ -6,7 +6,7 @@ manifest:
     #  url-base: https://github.com/petejohanson
     # nice_oled - nice_epaper - dongle_display!view - oled Adapter
     - name: mctechnology17
-      url-base: https://github.com/mctechnology17
+      url-base: https://github.com/mctechnology17/zmk-nice-oled.git
     - name: AYM1607
       url-base: https://github.com/AYM1607
   projects:
