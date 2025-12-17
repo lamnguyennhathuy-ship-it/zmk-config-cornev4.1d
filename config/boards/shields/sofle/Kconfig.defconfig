@@ -4,7 +4,7 @@
 if SHIELD_SOFLE_LEFT
 
 config ZMK_KEYBOARD_NAME
-    default "Sofle"
+    default "Cu Shin"
 
 config ZMK_SPLIT_ROLE_CENTRAL
     default y
@@ -20,7 +20,7 @@ if ZMK_DISPLAY
 
 config I2C
     default y
-#Remove SSD1306 setting as we are using nice!view
+
 config SSD1306
     default n
 
