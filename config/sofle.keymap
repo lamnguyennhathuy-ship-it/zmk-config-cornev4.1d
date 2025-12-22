@@ -34,11 +34,10 @@
             tapping-term-ms = <200>;
             bindings = <&to 0>, <&to 1>, <&to 2>;
         };
-        sticky_lmb: sticky_lmb {
-            compatible = "zmk,behavior-sticky-key";
-            label = "STICKY_LMB";
+        mkt: mouse_key_toggle {
+            compatible = "zmk,behavior-key-toggle";
             #binding-cells = <1>;
-            bindings = <&mkp MB1>;
+            bindings = <&mkp>;
         };
     };
 
@@ -90,7 +89,7 @@
             bindings = <
 // ╭───────────────┬───────────────┬───────────────┬───────────────┬───────────────┬───────────────╮                                 ╭───────────────┬───────────────┬───────────────┬───────────────┬───────────────┬───────────────╮
        &trans          &kp F1          &kp F2          &kp F3          &kp F4          &kp F5    /*|                                 |*/   &bt BT_CLR   &mkp LCLK       &mkp RCLK      &mkp MCLK       &mkp MB4           &mkp MB5         
-       &trans          &kp F6          &kp F7          &kp F8          &kp F9          &kp F10   /*|                                 |*/   &bt BT_NXT   &mmv MOVE_LEFT	&mmv MOVE_UP   &mmv MOVE_DOWN  &mmv MOVE_RIGHT    &sticky_lmb
+       &trans          &kp F6          &kp F7          &kp F8          &kp F9          &kp F10   /*|                                 |*/   &bt BT_NXT   &mmv MOVE_LEFT	&mmv MOVE_UP   &mmv MOVE_DOWN  &mmv MOVE_RIGHT    &mkt LCLK
        &trans          &kp F11         &kp F12         &kp F13         &kp F14         &kp F15   /*├─────────────╮     ╭─────────────┤*/   &bt BT_PRV   &msc SCRL_LEFT  &msc SCRL_UP   &msc SCRL_DOWN  &msc SCRL_LEFT     &trans 
 /* ╰───────────────┴───────────────┴───────────────┴───────────────┤*/ &trans            &trans         &trans              &trans         &trans         &trans   //├───────────────┴───────────────┴───────────────┴───────────────╯
 //                                                                 ╰───────────────┴───────────────┴─────────────╯     ╰─────────────┴───────────────┴───────────────╯
