@@ -5,8 +5,8 @@
 #include <dt-bindings/zmk/backlight.h>
 #include <dt-bindings/zmk/pointing.h>
 
-#define ZMK_POINTING_DEFAULT_SCRL_VAL 100   // default: 10
-#define ZMK_POINTING_DEFAULT_MOVE_VAL 600  // default: 600
+#define ZMK_POINTING_DEFAULT_SCRL_VAL 30   // default: 10
+#define ZMK_POINTING_DEFAULT_MOVE_VAL 1500  // default: 600
 #define BASE 0
 #define NUMB 1
 #define FUNC 2
@@ -23,7 +23,7 @@
 //};
 
 &lt {
-    tapping-term-ms = <300>; // Only turn on layer if the key is held for 0.3 seconds or longer.
+    tapping-term-ms = <200>; // Only turn on layer if the key is held for 0.2 seconds or longer.
 };
 
 / {
@@ -31,13 +31,13 @@
         td0: layer_toggle {
             compatible = "zmk,behavior-tap-dance";
             #binding-cells = <0>;
-            tapping-term-ms = <200>;
+            tapping-term-ms = <500>;
             bindings = <&to 0>, <&to 1>, <&to 2>;
         };
         td1: left_click_toggle {
             compatible = "zmk,behavior-tap-dance";
             #binding-cells = <0>;
-            tapping-term-ms = <200>;
+            tapping-term-ms = <500>;
             bindings = <&l_lock>, <&l_unlock>;
         };
     };
