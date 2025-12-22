@@ -5,17 +5,22 @@
 #include <dt-bindings/zmk/backlight.h>
 #include <dt-bindings/zmk/pointing.h>
 
-#define ZMK_POINTING_DEFAULT_SCRL_VAL 100
+#define ZMK_POINTING_DEFAULT_SCRL_VAL 100   // default: 10
+#define ZMK_POINTING_DEFAULT_MOVE_VAL 1500  // default: 600
 #define BASE 0
 #define NUMB 1
 #define FUNC 2
 #define ADD1 3
 #define ADD2 4
 #define ADD3 5
+#define ADD4 6
+#define ADD5 7
+#define ADD6 8
+#define ADD7 9
 
-&soft_off {
-    hold-time-ms = <3000>; // Only turn off it the key is held for 3 seconds or longer.
-};
+//&soft_off {
+//    hold-time-ms = <3000>; // Only turn off it the key is held for 3 seconds or longer.
+//};
 
 / {
    behaviors {
@@ -74,10 +79,10 @@
             label = "FUNC";
             bindings = <
 // ╭───────────────┬───────────────┬───────────────┬───────────────┬───────────────┬───────────────╮                                 ╭───────────────┬───────────────┬───────────────┬───────────────┬───────────────┬───────────────╮
-       &trans          &kp F1          &kp F2          &kp F3          &kp F4          &kp F5    /*|                                 |*/   &mkp LCLK     &mkp RCLK       &mkp MCLK        &mkp MB4       &mkp MB5         &soft_off
-       &trans          &kp F6          &kp F7          &kp F8          &kp F9          &kp F10   /*|                                 |*/   &bt BT_CLR    &bt BT_SEL 0    &bt BT_SEL 1     &bt BT_SEL 2   &bt BT_SEL 3     &bt BT_SEL 4
-       &trans          &kp F11         &kp F12         &kp F13         &kp F14         &kp F15   /*├─────────────╮     ╭─────────────┤*/   &none         &none           &none            &none          &none            &trans 
-/* ╰───────────────┴───────────────┴───────────────┴───────────────┤*/ &trans            &trans         &trans              &trans         &trans        &trans    //├───────────────┴───────────────┴───────────────┴───────────────╯
+       &trans          &kp F1          &kp F2          &kp F3          &kp F4          &kp F5    /*|                                 |*/   &bt BT_CLR   &mkp LCLK       &mkp RCLK      &mkp MCLK       &mkp MB4           &mkp MB5         
+       &trans          &kp F6          &kp F7          &kp F8          &kp F9          &kp F10   /*|                                 |*/   &bt BT_NXT   &mmv MOVE_LEFT	&mmv MOVE_UP   &mmv MOVE_DOWN  &mmv MOVE_RIGHT    &none
+       &trans          &kp F11         &kp F12         &kp F13         &kp F14         &kp F15   /*├─────────────╮     ╭─────────────┤*/   &bt BT_PRV   &msc SCRL_LEFT  &msc SCRL_UP   &msc SCRL_DOWN  &msc SCRL_LEFT     &trans 
+/* ╰───────────────┴───────────────┴───────────────┴───────────────┤*/ &trans            &trans         &trans              &trans         &trans         &trans   //├───────────────┴───────────────┴───────────────┴───────────────╯
 //                                                                 ╰───────────────┴───────────────┴─────────────╯     ╰─────────────┴───────────────┴───────────────╯
             >;
       };
@@ -85,12 +90,22 @@
       additional1 {
             status = "reserved";
         };
-
       additional2 {
             status = "reserved";
         };
-
       additional3 {
+            status = "reserved";
+        };
+      additional4 {
+            status = "reserved";
+        };
+      additional5 {
+            status = "reserved";
+        };
+      additional6 {
+            status = "reserved";
+        };
+      additional7 {
             status = "reserved";
         };
     };
