@@ -50,8 +50,8 @@
 //done row 3, to row 4
             , <&key_physical_attrs 100 100  400  312       0     0     0>
             , <&key_physical_attrs 100 100  500  324       0     0     0>
-            , <&key_physical_attrs 100 100  624  312    1200   600   333>
-            , <&key_physical_attrs 100 100  776  312 (-1200)   900   333>        
+            , <&key_physical_attrs 100 150  624  312    1200   600   333>
+            , <&key_physical_attrs 100 150  776  312 (-1200)   900   333>        
             , <&key_physical_attrs 100 100  900  324       0     0     0>
             , <&key_physical_attrs 100 100 1000  312       0     0     0>
             ;
