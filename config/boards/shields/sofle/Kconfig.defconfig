@@ -12,6 +12,8 @@ if SHIELD_SOFLE_LEFT || SHIELD_SOFLE_RIGHT
 
     config ZMK_SPLIT
         default y
+    config CONFIG_ZMK_PM_SOFT_OFF
+        default y
 
     if ZMK_DISPLAY
 
