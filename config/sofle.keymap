@@ -23,7 +23,7 @@
 //};
 
 &lt {
-    tapping-term-ms = <500>; // Only turn on layer if the key is held for 0.5 seconds or longer.
+    tapping-term-ms = <300>; // Only turn on layer if the key is held for 0.3 seconds or longer.
 };
 
 / {
@@ -56,19 +56,23 @@
                 , <&macro_release &kp LALT>
                 ;
         };
-        l_lock: l_lock {
+        l_lock: mouse_button_1_click {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             wait-ms = <0>;
             tap-ms = <0>;
-            bindings = <&macro_press &mkp LCLK>;
+            bindings 
+                = <&macro_press &mkp MB1>
+                ;
         };
-        l_unlock: l_unlock {
+        l_unlock: mouse_button_1_release {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             wait-ms = <0>;
             tap-ms = <0>;
-            bindings = <&macro_release &mkp LCLK>;
+            bindings 
+                = <&macro_release &mkp MB1>
+                ;
         };
     };
 
@@ -82,7 +86,7 @@
        &kp TAB        &kp Q            &kp W           &kp E           &kp R           &kp T     /*|                                 |*/  &kp Y          &kp U           &kp I           &kp O           &kp SEMI       &kp BSLH
        &sk LSHIFT     &kp A            &kp S           &kp D           &kp F           &kp G     /*|                                 |*/  &kp H          &kp J           &kp K           &kp L           &kp P          &kp SQT
        &kp LCTRL      &kp Z            &kp X           &kp C           &kp V           &kp B     /*├─────────────╮     ╭─────────────┤*/  &kp N          &kp M           &kp COMMA       &kp DOT         &kp FSLH       &kp ENTER
-/* ╰───────────────┴───────────────┴───────────────┴───────────────┤*/ &kp LGUI    &mt LALT LC(BSPC)  &lt 1 BSPC          &lt 2 SPACE  &mt LSHIFT ESC    &td0      //├───────────────┴───────────────┴───────────────┴───────────────╯
+/* ╰───────────────┴───────────────┴───────────────┴───────────────┤*/ &kp LGUI    &mt LALT LC(BSPC)  &lt 1 BSPC         &lt 2 SPACE   &mt LSHIFT ESC    &td0      //├───────────────┴───────────────┴───────────────┴───────────────╯
 //                                                                 ╰───────────────┴───────────────┴─────────────╯     ╰─────────────┴───────────────┴───────────────╯
             >;
         };
@@ -103,9 +107,9 @@
             label = "FUNC";
             bindings = <
 // ╭───────────────┬───────────────┬───────────────┬───────────────┬───────────────┬───────────────╮                                 ╭───────────────┬───────────────┬───────────────┬───────────────┬───────────────┬───────────────╮
-       &trans          &kp F1          &kp F2          &kp F3          &kp F4          &kp F5    /*|                                 |*/   &bt BT_CLR   &mkp LCLK       &mkp RCLK      &mkp MCLK       &mkp MB4           &mkp MB5         
+       &trans          &kp F1          &kp F2          &kp F3          &kp F4          &kp F5    /*|                                 |*/   &bt BT_CLR   &mkp MB1        &mkp MB2       &mkp MB3        &mkp MB4           &mkp MB5         
        &trans          &kp F6          &kp F7          &kp F8          &kp F9          &kp F10   /*|                                 |*/   &bt BT_NXT   &mmv MOVE_LEFT	&mmv MOVE_UP   &mmv MOVE_DOWN  &mmv MOVE_RIGHT    &td1
-       &trans          &kp F11         &kp F12         &kp F13         &kp F14         &kp F15   /*├─────────────╮     ╭─────────────┤*/   &bt BT_PRV   &msc SCRL_LEFT  &msc SCRL_UP   &msc SCRL_DOWN  &msc SCRL_LEFT     &trans 
+       &trans          &kp F11         &kp F12         &kp F13         &kp F14         &kp F15   /*├─────────────╮     ╭─────────────┤*/   &bt BT_PRV   &msc SCRL_LEFT  &msc SCRL_UP   &msc SCRL_DOWN  &msc SCRL_RIGHT    &trans 
 /* ╰───────────────┴───────────────┴───────────────┴───────────────┤*/ &trans            &trans         &trans              &trans         &trans         &trans   //├───────────────┴───────────────┴───────────────┴───────────────╯
 //                                                                 ╰───────────────┴───────────────┴─────────────╯     ╰─────────────┴───────────────┴───────────────╯
             >;
