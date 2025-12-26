@@ -20,10 +20,6 @@
 #define ADD8 10
 #define ADD9 11
 
-//&soft_off {
-//    hold-time-ms = <3000>; // Only turn off it the key is held for 3 seconds or longer.
-//};
-
 &lt {
     tapping-term-ms = <250>; // Only turn on layer if the key is held for 0.25 seconds or longer.
 };
